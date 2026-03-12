@@ -40,6 +40,29 @@ This is a static HTML/CSS/JS portfolio template. There are no runtime Python or 
 - This is a static template (HTML/CSS/JS). There are no server-side components in this project by default.
 - `requirements.txt` intentionally contains no Python packages because the site is static. See that file for details.
 
+## Deploying to Vercel
+
+This project is ready for Vercel (static site) deployments. You can deploy either via the Vercel web UI (connect your GitHub repo) or with the Vercel CLI.
+
+Web UI (recommended):
+
+- Push the repo to GitHub (you've already done this).
+- Go to https://vercel.com, sign in with GitHub, click "New Project", pick your repo and import it.
+- For a static site, Vercel usually detects the right settings automatically. Set the "Build Command" to empty and "Output Directory" to `/` if prompted.
+
+Vercel CLI (one-time deploy from your machine):
+
+```powershell
+npm i -g vercel
+vercel login
+cd "c:\Users\DELL\OneDrive\Desktop\ranjthportfolio-126\FreeFolio Free Website Template - Free-CSS.com\freelancer-portfolio-template"
+vercel --prod
+```
+
+After the first deploy, Vercel links the project to your Git provider and will auto-deploy on pushes to the connected branch.
+
+I've also added an optional `vercel.json` in the repo to explicitly tell Vercel to treat the project as a static site.
+
 ## Maintainer suggestions (optional)
 
 - If you want live reload while editing, consider installing `live-server` or a similar tool and updating the `package.json` scripts.
